@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1.text-center.pretty-text JustTranslate
+	.container
+		.row
+			.col-md-5
+				select.form-control.buffer
+					option #{LangObj1.title}
+				textarea(class='form-control', rows=7, autofocus=true)
+			.opposite-icon.col-md-2
+			.col-md-5
+				select.form-control.buffer
+					option #{LangObj2.title}
+				textarea(class='form-control', rows=7, autofocus=true)
+		

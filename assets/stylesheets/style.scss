@@ -1,0 +1,62 @@
+@import "../../node_modules/node-bourbon/assets/stylesheets/_bourbon.scss";
+$blue: #5B83AD;
+$yellow: #FFFFE0;
+$scarlet: rgb(155, 73, 73);
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    .template {
+        background-color: $yellow;
+    }
+    .pretty-text {
+        color: $scarlet;
+    }
+    h1 {
+        margin-left: -70px;
+    }
+    .container {
+        .buffer {
+            margin: 8px 0px 20px 0px;
+        }
+        textarea {
+            resize: none;
+        }
+        .row {
+            margin: 0px auto;
+            width: auto;
+            max-width: 800px;
+            text-align: center;
+        }
+    }
+    .helper {
+        border: 1px solid $blue;
+    }
+    .styled {
+        -webkit-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+        margin-top: 100px;
+        position: absolute;
+    }
+    .vertical-line {
+        border-right: 2px solid #C2C2C2;
+    }
+    .pretty-text {
+        font-family: "Oswald";
+    }
+    .opposite-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('../images/opposite.svg') no-repeat;
+        background-size: 24px;
+        margin: 13px 0px 0px 5px;
+        @include transition(all .2s ease);
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+}

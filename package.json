@@ -1,0 +1,16 @@
+{
+  "name": "TranslateApp",
+  "version": "0.0.1",
+  "description": "A Mimosa starter skeleton",
+  "dependencies": {
+    "consolidate": "0.10.0",
+    "hapi": "6.3.0",
+    "jade": "1.5.0",
+    "node-bourbon": "^1.2.3"
+  },
+  "devDependencies": {
+    "node-bourbon": "*",
+    "mimosa-sass": "*",
+    "mimosa-jade": "*"
+  }
+}
