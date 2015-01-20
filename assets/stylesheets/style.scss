@@ -2,6 +2,9 @@
 $blue: #5B83AD;
 $yellow: #FFFFE0;
 $scarlet: rgb(155, 73, 73);
+$translate-icon: #F5E10C;
+$translate-icon-shadow: rgba(153, 57, 57, 0.81);
+$translate-icon-text: rgb(126, 36, 36);
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -57,6 +60,40 @@ body {
         &:hover {
             cursor: pointer;
             opacity: .8;
+        }
+    }
+    .translate-icon-container {
+        position: relative;
+        .translate-icon {
+            display: inline-block;
+            width: 106px;
+            height: 30px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 0px 2px $translate-icon-shadow;
+            text-align: right;
+            padding: 4px 8px 0px 0px;
+            color: $translate-icon-text;
+            font-family: Oswald;
+            font-size: 16px;
+            position: absolute;
+            right: -18px;
+            top: 9px;
+            fill: $translate-icon-shadow;
+            @include transition(all .3s);
+            #Layer_1 {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 6px;
+            }
+            &:hover {
+                fill: #fff;
+                cursor: pointer;
+                color: #fff;
+                box-shadow: 0px 0px 0px 2px $translate-icon-text;
+                background-color: $translate-icon-text; //$translate-icon;
+                opacity: .8;
+            }
         }
     }
 }
