@@ -16,5 +16,8 @@ exports.config = {
     liveReload: {
         enabled: true,
         additionalDirs: ["views"]
+    },
+    sass: {
+        extensions: ["sass", "scss"]
     }
 }

@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	.container
+	.container.aluminium-space
 		h1.text-center.pretty-text JustTranslate
 		.row
 			.col-md-5
@@ -20,7 +20,8 @@ block content
 							option(selected="selected")= item
 						else
 							option= item
-				textarea(class='form-control', rows=7, autofocus=true, readonly=true)
-			.translate-icon-container
-				.translate-icon Translate
-					include svg
+				textarea(class='form-control', rows=7, autofocus=true, readonly=true, id="translate-result")
+					
+				.translate-icon-container
+					.translate-icon Translate
+						include svg

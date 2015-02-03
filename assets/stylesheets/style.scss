@@ -5,6 +5,8 @@ $scarlet: rgb(155, 73, 73);
 $translate-icon: #F5E10C;
 $translate-icon-shadow: rgba(153, 57, 57, 0.81);
 $translate-icon-text: rgb(126, 36, 36);
+$light-gray: rgba(213, 213, 213, 0.36);
+$disabled-textarea: rgba(171, 171, 171, 0.55);
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -17,7 +19,16 @@ body {
     h1 {
         margin-left: -70px;
     }
+    .form-control[disabled], .form-control[readonly] {
+        background-color: $disabled-textarea;
+    }
     .container {
+        &.aluminium-space {
+            border: 1px solid darken($scarlet, 20%); //rgb(94, 12, 12);
+            border-radius: 4px;
+            padding: 5%;
+            box-shadow: inset 0px 0px 150px 150px $light-gray;
+        }
         .buffer {
             margin: 8px 0px 20px 0px;
         }
