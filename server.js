@@ -1,4 +1,5 @@
 var Hapi = require('hapi');
+var request = require('request-promise');
 exports.startServer = function(config, callback) {
     var port = process.env.PORT || config.server.port;
     var serverOptions = {
@@ -15,6 +16,7 @@ exports.startServer = function(config, callback) {
 
     var routeOptions = {
         reload: config.liveReload.enabled,
+        test: {a: 1, b: 2},
         LangObj1: {
             title: 'English'
         },
@@ -30,7 +32,14 @@ exports.startServer = function(config, callback) {
         method: 'GET',
         path: '/',
         handler: function(req, reply) {
-            reply.view('index', routeOptions);
+            request('https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20150120T002528Z.2126c945e0033cc4.29d883edef031620bee00dd72e3d1419a6ee274b&ui=en').then(function(data) {
+                routeOptions.data = data.toString();
+                var newData = JSON.parse(data);
+                console.log(newData.langs);
+                routeOptions.langs = newData.langs;
+                console.log(typeof routeOptions.langs);
+                    reply.view('index', routeOptions);
+            });
 
         }
     });
