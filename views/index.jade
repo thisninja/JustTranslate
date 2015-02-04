@@ -5,21 +5,21 @@ block content
 		h1.text-center.pretty-text JustTranslate
 		.row
 			.col-md-5
-				select.form-control.buffer
-					each item in langs
-						if item == "English"
-							option(selected="selected")= item
+				select#translate-area-lang.form-control.buffer
+					each key, item in data.langs
+						if key == "English"
+							option(value=item, selected="selected")= key
 						else
-							option= item
-				textarea(class='form-control', rows=7, autofocus=true)
+							option(value=item)= key
+				textarea(class='form-control', rows=7, autofocus=true, id="translate-area")
 			.opposite-icon.col-md-2
 			.col-md-5
-				select.form-control.buffer
-					each item in langs
-						if item == "Ukrainian"
-							option(selected="selected")= item
+				select#translate-result-lang.form-control.buffer
+					each key, item in data.langs
+						if key == "Ukrainian"
+							option(value=item, selected="selected")= key
 						else
-							option= item
+							option(value=item)= key
 				textarea(class='form-control', rows=7, autofocus=true, readonly=true, id="translate-result")
 					
 				.translate-icon-container

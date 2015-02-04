@@ -6,7 +6,7 @@ $translate-icon: #F5E10C;
 $translate-icon-shadow: rgba(153, 57, 57, 0.81);
 $translate-icon-text: rgb(126, 36, 36);
 $light-gray: rgba(213, 213, 213, 0.36);
-$disabled-textarea: rgba(171, 171, 171, 0.55);
+$disabled-textarea: rgba(245, 245, 245, 0.55);
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -74,7 +74,6 @@ body {
         }
     }
     .translate-icon-container {
-        position: relative;
         .translate-icon {
             display: inline-block;
             width: 106px;
@@ -86,9 +85,8 @@ body {
             color: $translate-icon-text;
             font-family: Oswald;
             font-size: 16px;
-            position: absolute;
-            right: -18px;
-            top: 9px;
+            position: relative;
+            margin-top: 25px;
             fill: $translate-icon-shadow;
             @include transition(all .3s);
             #Layer_1 {
