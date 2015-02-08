@@ -1,4 +1,5 @@
-@import "../../node_modules/node-bourbon/assets/stylesheets/_bourbon.scss";
+@import "compass"; 
+//@import "bourbon/bourbon"; // you can use it as an alternative
 $blue: #5B83AD;
 $yellow: #FFFFE0;
 $scarlet: rgb(155, 73, 73);
@@ -8,8 +9,9 @@ $translate-icon-text: rgb(126, 36, 36);
 $light-gray: rgba(213, 213, 213, 0.36);
 $disabled-textarea: rgba(245, 245, 245, 0.55);
 body {
+    background: url('../images/photography.png');
     padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-senrif;
     .template {
         background-color: $yellow;
     }
