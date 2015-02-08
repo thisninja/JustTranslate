@@ -7,7 +7,7 @@ Use `$ git clone https://github.com/thisninja/JustTranslate.git` to download thi
 
 ###Dependencies:
 
-To provide this app works local you need a several dependencies:
+To provide this app works local you need several dependencies:
 * `$ NPM install` 
 * Ruby gem sass; `$ gem install sass`
 * Ruby gem compass; `$ gem install compass`
